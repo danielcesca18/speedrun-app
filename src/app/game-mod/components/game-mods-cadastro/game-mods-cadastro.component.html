@@ -1,0 +1,56 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Cadastro de Players</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <form [formGroup]="runsForm">
+    <ion-item>
+      <ion-label position="floating">RTA: </ion-label>
+      <ion-input formControlName="rta" type="text" placeholder="00:00:00"></ion-input>
+      <ion-text
+        color="danger"
+        *ngIf="rta?.invalid && (rta?.dirty || rta?.touched)"
+      >
+        <small *ngIf="rta?.errors?.['required']">
+          O campo RTA é obrigatório
+        </small>
+      </ion-text>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">gameId: </ion-label>
+      <ion-input formControlName="gameId" type="text"> </ion-input>
+      <ion-text
+        color="danger"
+        *ngIf="gameId?.invalid && (gameId?.dirty || gameId?.touched)"
+      >
+        <small *ngIf="gameId?.errors?.['required']">
+          O campo gameId é obrigatório
+        </small>
+      </ion-text>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">playerId: </ion-label>
+      <ion-input formControlName="playerId" type="playerId"> </ion-input>
+      <ion-text
+        color="danger"
+        *ngIf="playerId?.invalid && (playerId?.dirty || playerId?.touched)"
+      >
+        <small *ngIf="playerId?.errors?.['required']">
+          O campo playerId é obrigatório
+        </small>
+      </ion-text>
+    </ion-item>
+
+    <ion-fab vertical="bottom" horizontal="end">
+      <ion-fab-button (click)="salvar()" [disabled]="!runsForm.valid">
+        <ion-icon name="checkmark-outline"></ion-icon>
+      </ion-fab-button>
+    </ion-fab>
+  </form>
+</ion-content>
