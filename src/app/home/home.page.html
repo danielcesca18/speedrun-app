@@ -1,0 +1,53 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Speedrun App</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>
+        Bem-vindo ao Speedrun App!
+      </ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      Cadastre jogadores, jogos e runs!
+    </ion-card-content>
+  </ion-card>
+
+    <ion-col>
+      <ion-card>
+        <ion-card-header [routerLink]="['/players']">
+          <ion-card-title>
+            <ion-icon name="body-outline" class="ion-float-left ion-margin-end"></ion-icon>
+            Players
+          </ion-card-title>
+        </ion-card-header>
+      </ion-card>
+    </ion-col>
+    <ion-col>
+      <ion-card>
+        <ion-card-header [routerLink]="['/games']">
+          <ion-card-title>
+            <ion-icon name="game-controller-outline" class="ion-float-left ion-margin-end"></ion-icon>
+            Games
+          </ion-card-title>
+        </ion-card-header>
+      </ion-card>
+    </ion-col>
+    <ion-col>
+      <ion-card>
+        <ion-card-header [routerLink]="['/runs']">
+          <ion-card-title>
+            <ion-icon name="rocket-outline" class="ion-float-left ion-margin-end"></ion-icon>
+            Runs
+          </ion-card-title>
+        </ion-card-header>
+      </ion-card>
+    </ion-col>
+</ion-content>

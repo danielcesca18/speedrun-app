@@ -1,0 +1,7 @@
+{
+  "name": "speedrun-app",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

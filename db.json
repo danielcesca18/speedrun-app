@@ -1,0 +1,66 @@
+{
+  "players": [
+    {
+      "id": 2,
+      "username": "player2",
+      "email": "player2@example.com",
+      "password": "senha456",
+      "lastVisit": "2023-11-27"
+    },
+    {
+      "username": "player4",
+      "email": "player3@example.com",
+      "password": "senha789",
+      "id": 3,
+      "lastVisit": "2023-11-29T04:26:22.105Z"
+    }
+  ],
+  "runs": [
+    {
+      "id": 2,
+      "playerId": 2,
+      "gameId": 2,
+      "timeRTA": "02:15:00",
+      "date": "2023-11-27"
+    },
+    {
+      "id": 3,
+      "playerId": 3,
+      "gameId": 3,
+      "timeRTA": "00:45:00",
+      "date": "2023-11-26"
+    }
+  ],
+  "games": [
+    {
+      "id": 1,
+      "name": "Game1",
+      "releaseDate": "2023-01-01",
+      "coverImage": "game1.jpg",
+      "moderators": [
+        1,
+        2
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Game2",
+      "releaseDate": "2023-02-01",
+      "coverImage": "game2.jpg",
+      "moderators": [
+        2,
+        3
+      ]
+    },
+    {
+      "id": 3,
+      "name": "Game3",
+      "releaseDate": "2023-03-01",
+      "coverImage": "game3.jpg",
+      "moderators": [
+        3,
+        1
+      ]
+    }
+  ]
+}

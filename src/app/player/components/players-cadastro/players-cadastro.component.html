@@ -1,0 +1,80 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Cadastro de Players</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <form [formGroup]="playersForm">
+    <ion-item>
+      <ion-label position="floating">username: </ion-label>
+      <ion-input formControlName="username" type="text"> </ion-input>
+      <ion-text
+        color="danger"
+        *ngIf="username?.invalid && (username?.dirty || username?.touched)"
+      >
+        <small *ngIf="username?.errors?.['required']">
+          O campo username é obrigatório
+        </small>
+        <small *ngIf="username?.errors?.['minlength']">
+          O campo username deve conter no mínimo
+          {{ username?.errors?.['minlength'].requiredLength }} caracteres
+        </small>
+        <small *ngIf="username?.errors?.['maxlength']">
+          O campo username deve conter no máximo
+          {{ username?.errors?.['maxlength'].requiredLength }} caracteres
+        </small>
+      </ion-text>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">email: </ion-label>
+      <ion-input formControlName="email" type="text"> </ion-input>
+      <ion-text
+        color="danger"
+        *ngIf="email?.invalid && (email?.dirty || email?.touched)"
+      >
+        <small *ngIf="email?.errors?.['required']">
+          O campo email é obrigatório
+        </small>
+        <small *ngIf="email?.errors?.['minlength']">
+          O campo email deve conter no mínimo
+          {{ email?.errors?.['minlength'].requiredLength }} caracteres
+        </small>
+        <small *ngIf="email?.errors?.['maxlength']">
+          O campo email deve conter no máximo
+          {{ email?.errors?.['maxlength'].requiredLength }} caracteres
+        </small>
+      </ion-text>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">password: </ion-label>
+      <ion-input formControlName="password" type="password"> </ion-input>
+      <ion-text
+        color="danger"
+        *ngIf="password?.invalid && (password?.dirty || password?.touched)"
+      >
+        <small *ngIf="password?.errors?.['required']">
+          O campo password é obrigatório
+        </small>
+        <small *ngIf="password?.errors?.['minlength']">
+          O campo password deve conter no mínimo
+          {{ password?.errors?.['minlength'].requiredLength }} caracteres
+        </small>
+        <small *ngIf="password?.errors?.['maxlength']">
+          O campo password deve conter no máximo
+          {{ password?.errors?.['maxlength'].requiredLength }} caracteres
+        </small>
+      </ion-text>
+    </ion-item>
+
+    <ion-fab vertical="bottom" horizontal="end">
+      <ion-fab-button (click)="salvar()" [disabled]="!playersForm.valid">
+        <ion-icon name="checkmark-outline"></ion-icon>
+      </ion-fab-button>
+    </ion-fab>
+  </form>
+</ion-content>
