@@ -3,4 +3,5 @@ export interface GameInterface {
   title: string;
   releaseDate: Date;
   cover: string | null;
+  createdAt: Date;
 }

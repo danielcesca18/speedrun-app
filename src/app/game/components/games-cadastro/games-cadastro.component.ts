@@ -53,7 +53,8 @@ export class GamesCadastroComponent implements OnInit {
     const game: GameInterface = {
       ...this.gamesForm.value,
       id: this.gameId,
-      cover: this.gameCover
+      cover: this.gameCover,
+      createdAt: new Date()
     };
     this.gameService.salvar(game).subscribe(
       () => this.router.navigate(['games']),
